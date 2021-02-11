@@ -9,6 +9,7 @@ namespace Restaurants.Models
 {
     public class ApplicationResponse
     {
+        //this model takes the user data, makes sure it has everything needed to validate the model
         [Required]
         #nullable disable
         public string Name { get; set; }

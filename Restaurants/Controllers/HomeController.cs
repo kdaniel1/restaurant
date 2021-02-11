@@ -28,11 +28,14 @@ namespace Restaurants.Controllers
             
             return View(restaurantList);
         }
+        //Takes user to the add a restaurant page
         [HttpGet]
         public IActionResult AddRestaurant()
         {
             return View();
         }
+        // with the HttpPost it makes sure the model state is valid then loads
+        //the confirmation page, else it allows the user to fix any errors.
 
         [HttpPost]
         public IActionResult AddRestaurant(ApplicationResponse appResponse)
@@ -45,6 +48,7 @@ namespace Restaurants.Controllers
             return View(appResponse);
         }
 
+        //Allows user to see past entries
         public IActionResult UserInput()
         {
             return View(TempStorage.Applications);

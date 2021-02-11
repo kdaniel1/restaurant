@@ -2,7 +2,7 @@
     ViewData["Title"] = "Welcome";
 }
 @model IEnumerable<string>
-
+@*Here I added a few bootstrap classes*@
 <div class="text-center">
     <h1 class="font-weight-bold"> Welcome! </h1>
     <p class="display-10">A site dedicated to good food in Provo!</p>
@@ -10,6 +10,8 @@
 
 <h2 class="text-uppercase text-center"> Here are the top five places:</h2>
 <ul class="text-info">
+    @*this for loop loads all of the information I inputted (hypothetically could be data from a
+        DB or just things automatically added to a site.*@
     @foreach (string r in Model)
     {
         <li>@r</li>
@@ -17,5 +19,5 @@
     }
 </ul>
 <div class="center">
-<img src="~/img/provo.jpg" width="500" class="rounded center" />
+    <img src="~/img/provo.jpg" width="500" class="rounded center" />
 </div>
