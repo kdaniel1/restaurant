@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Add a Place";
+}
+        @model Restaurants.Models.ApplicationResponse
+<h2> What restaurant do you want to add to our list?</h2>
+<form asp-action="AddRestaurant" method="post">
+    <div>
+        <label asp-for="Name"> Name: </label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label asp-for="Restaurant"> Restaurant: </label>
+        <input asp-for="Restaurant" />
+    </div>
+
+    <div>
+        <label asp-for="FavDish"> Favorite Dish: </label>
+        <input asp-for="FavDish" />
+    </div>
+
+    <div>
+        <label asp-for="PhoneNumber"> Phone Number: </label>
+        <input asp-for="PhoneNumber" />
+
+    </div>
+    <div>
+        <label asp-for="Website"> Website (Optional): </label>
+        <input asp-for="Website" />
+    </div>
+    <div asp-validation-summary="All"></div>
+        <button class="btn-dark" type="submit"> Submit</button>
+</form>

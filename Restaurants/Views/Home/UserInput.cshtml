@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Recommended a Restaurant";
+}
+
+@model IEnumerable<Restaurants.Models.ApplicationResponse>
+<div>
+    <h2 class="font-weight-bold"> List of Restaurants:</h2>
+    <table class="text-center">
+        <thead>
+            <tr>
+                <th>User Name</th>  
+                <th>Restaurant Name</th> 
+                <th>Favorite Dish</th>
+                <th>Phone Number</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+            <tbody>
+                @foreach (Restaurants.Models.ApplicationResponse r in Model)
+                {
+                <tr>
+                    <td>@r.Name</td>
+                    <td>@r.Restaurant</td>
+                    <td>@r.FavDish</td>
+                    <td>@r.PhoneNumber</td>
+                    <td>@r.Website</td>
+
+                </tr>
+                }
+            </tbody>
+    </table>
+</div>

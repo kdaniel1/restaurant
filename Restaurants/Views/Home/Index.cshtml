@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+@model IEnumerable<string>
+
+<div class="text-center">
+    <h1 class="font-weight-bold"> Welcome! </h1>
+    <p class="display-10">A site dedicated to good food in Provo!</p>
+</div>
+
+<h2 class="text-uppercase text-center"> Here are the top five places:</h2>
+<ul class="text-info">
+    @foreach (string r in Model)
+    {
+        <li>@r</li>
+
+    }
+</ul>
+<div class="center">
+<img src="~/img/provo.jpg" width="500" class="rounded center" />
+</div>

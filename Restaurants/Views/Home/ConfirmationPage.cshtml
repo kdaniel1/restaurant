@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Thanks " + Model.Name + ". Submission received for " + Model.Restaurant + ".";
+}
+@model Restaurants.Models.ApplicationResponse
+
+<div>
+
+</div>
+<div class="text-center text-success">
+@ViewBag.Title
+</div>
+<br />
+<div class="text-center">
+    Click <a asp-action="Index"> here to see the Top 5 restaurants. </a>
+    <br />
+    <br />
+    Click <a asp-action="UserInput"> here to see all of the restaurants you and other have recommended. </a>
+</div>
