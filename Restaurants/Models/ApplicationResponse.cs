@@ -18,7 +18,7 @@ namespace Restaurants.Models
         public string Restaurant { get; set; }
         #nullable disable
         [Required]
-        public string? FavDish { get; set; }
+        public string FavDish { get; set; } = "They're all tasty!";
         [Required]
         [RegularExpression(@"^[2-9]\d{2}-\d{3}-\d{4}$", ErrorMessage = "Phone number should be in the following format: XXX-XXX-XXXX")]
         #nullable disable
